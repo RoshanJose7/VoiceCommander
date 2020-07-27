@@ -1,7 +1,10 @@
 A sample demo of a smaller version of Jarves using Python
 
-To install the required components for this project to run
+To install the required components for this project to run the install.bat file as administrator.
 
-Use the command: "pip install -r requirments.txt" on our command line
+And your done!!!
 
-And don't forget to use the virtual enviornment which is already created
+And remember i've coded it in such a way that it opens only the firefox browser,
+chrome is not et supported.
+
+Maybe soon!!!!
