@@ -131,6 +131,13 @@ if __name__ == "__main__":
                     'I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
 
         elif 'quit' or 'exit' or 'stop' in query:
-            print("Exiting....")
-            speak("Exiting....")
-            exit()
+            try:
+                print("Exiting....")
+                speak("Exiting....")
+                exit()
+            except Exception as e:
+                print(e)
+                speak('I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
+
+        else:
+            speak('I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
