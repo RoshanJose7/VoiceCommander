@@ -1,10 +1,9 @@
-#A sample demo of a smaller version of Jarves using Python
+# Miniature Jarves
+A miniature version of Jarves from Iron Man using Speech Recognition and Text to Speech Library.
 
+## Install Instructions
 To install the required components for this project to run the install.bat file as administrator.
-
 And your done!!!
 
-And remember i've coded it in such a way that it opens only the firefox browser,
-chrome is not yet supported.
-
-Maybe soon!!!!
+## Note
+Browser Support : Firefox
