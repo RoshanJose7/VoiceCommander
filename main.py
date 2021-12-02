@@ -51,11 +51,10 @@ def takeCommand():
     try:
         print('Recognising....')
         query = r.recognize_google(audio, language='en-uk')
-        print(f'User-said: {query}\n')
+        print(query)
 
     except Exception as e:
         print(e)
-        print('Say that again please!!')
         return 'None'
     return query
 
@@ -84,8 +83,8 @@ if __name__ == "__main__":
             webbrowser.get('firefox').open('youtube.com')
 
         elif 'gmail' in query:
-            print('Let me show you!!')
-            speak('Let me show you!!')
+            print('Moving to G Mail!!')
+            speak('Moving to G Mail!!')
             webbrowser.get('firefox').open('mail.google.com')
 
         elif 'stackoverflow' in query:
@@ -99,10 +98,9 @@ if __name__ == "__main__":
             os.startfile('C:\\Windows\\system32\\cmd.exe')
 
         elif 'browser' in query:
-            print('Opening Firefox for you!')
-            speak('Opening Firefox for you!')
-            os.startfile(
-                'C:\\Program Files\\Mozilla Firefox\\firefox.exe')
+            print('Opening Firefox!')
+            speak('Opening Firefox!')
+            os.startfile('C:\\Program Files\\Mozilla Firefox\\firefox.exe')
 
         elif 'code' in query:
             print('Opening your favourite Editor!!!')
@@ -120,24 +118,20 @@ if __name__ == "__main__":
 
         elif 'email' in query:
             try:
-                speak("Can you type his emailid for me?")
-                to = input("Can you type his emailid for me?")
+                speak("Please type the senders emailid")
+                to = input("Please type the senders emailid?")
                 content = takeCommand()
                 sendEmail(to, content)
-                speak("Your email has been sent.")
+                speak("Email sent.")
             except Exception as e:
                 print(e)
-                speak(
-                    'I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
+                speak('Sorry i\'m unable to send the email. Are you sure the credentials are correct?')
 
-        elif 'quit' or 'exit' or 'stop' in query:
-            try:
-                print("Exiting....")
-                speak("Exiting....")
-                exit()
-            except Exception as e:
-                print(e)
-                speak('I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
+        elif 'self destruct' in query:
+            print('Self Destructing...')
+            speak('Self Destructing!! Please stay away!!')
+            exit()
 
         else:
-            speak('I\'m sorry i am not able to send the email. Are you sure what you typed was right?')
+            print('Sorry I do not know that!')
+            speak('Sorry I do not know that!')
